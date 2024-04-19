@@ -4,9 +4,7 @@ import PropTypes from "prop-types";
 const WeatherData = async (locationData) => {
   try {
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${
-        locationData[0].lat
-      }&lon=${locationData[0].lon}&APPID=${import.meta.env.VITE_OWM}`
+      `api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=3ab168801793bb25d16b441c202bb748`
     );
     const weatherData = await response.json();
     return weatherData;
